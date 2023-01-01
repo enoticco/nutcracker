@@ -13,6 +13,7 @@ import org.springframework.jms.support.converter.MessageType;
 
 import javax.jms.ConnectionFactory;
 
+// @ExtendWith(SpringExtension.class) ju5
 @TestConfiguration
 @EnableJms
 public class JMSTestConfig {

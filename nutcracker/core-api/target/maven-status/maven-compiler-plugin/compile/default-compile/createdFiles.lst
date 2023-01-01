@@ -1,0 +1,3 @@
+com/slekupuh/mts/nutcraker/core/event/DomainEvent.class
+com/slekupuh/mts/nutcraker/core/command/CommandHandler.class
+com/slekupuh/mts/nutcraker/core/command/Command.class
