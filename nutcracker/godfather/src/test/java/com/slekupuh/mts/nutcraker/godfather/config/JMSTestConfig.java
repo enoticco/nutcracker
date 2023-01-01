@@ -1,5 +1,9 @@
 package com.slekupuh.mts.nutcraker.godfather.config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.activemq.ActiveMQConnection;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +16,10 @@ import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.ObjectMessage;
+
+import org.springframework.jms.connection.SingleConnectionFactory;
 
 // @ExtendWith(SpringExtension.class) ju5
 @TestConfiguration
@@ -19,11 +27,16 @@ import javax.jms.ConnectionFactory;
 public class JMSTestConfig {
 
     @Bean
-    public JmsListenerContainerFactory<?> commandFactory(ConnectionFactory connectionFactory,
-                                                         DefaultJmsListenerContainerFactoryConfigurer configurer) {
+    public ConnectionFactory connectionFactory() throws JMSException {
+        return new  SingleConnectionFactory(ActiveMQConnection.makeConnection());
+    }
+
+    @Bean
+    public JmsListenerContainerFactory<?> commandFactory(ConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         // This provides all boot's default to this factory, including the message converter
-        configurer.configure(factory, connectionFactory);
+        factory.setMessageConverter(jacksonJmsMessageConverter());
+        factory.setConnectionFactory(connectionFactory);
         // You could still override some of Boot's default if necessary.
         return factory;
     }
@@ -35,4 +48,5 @@ public class JMSTestConfig {
         converter.setTypeIdPropertyName("_type");
         return converter;
     }
+
 }
