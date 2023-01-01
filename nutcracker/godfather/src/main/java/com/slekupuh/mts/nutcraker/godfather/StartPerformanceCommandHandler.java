@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StartPerformanceCommandHandler extends CommandHandler<StartPerformanceCommand> {
     @Override
-    @JmsListener(destination = "godfatherCommand", containerFactory = "commandFactory")
+    @JmsListener(destination = "godfatherCommand") //, containerFactory = "commandFactory"
     public void handle(StartPerformanceCommand command) {
         log.debug(" command {} processId {}",command.getClass().getSimpleName(), command.getProcessId());
         // todo:next

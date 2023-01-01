@@ -41,7 +41,7 @@ spring:
 logging:
   pattern:
     console: "%msg%n"
-  level:
-    - ".=info"
-    - "com.memorynotfound=debug"
-    - "org.springframework=info"
+#  level:
+#    - ".=info"
+#    - "com.memorynotfound=debug"
+#    - "org.springframework=info"
