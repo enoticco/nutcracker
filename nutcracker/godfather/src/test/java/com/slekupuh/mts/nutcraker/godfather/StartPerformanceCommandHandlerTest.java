@@ -26,14 +26,10 @@ public class StartPerformanceCommandHandlerTest {
 
     @Test
     public void handleTest() throws JMSException {
-        ActiveMQObjectMessage message = new ActiveMQObjectMessage();
         StartPerformanceCommand command = new StartPerformanceCommand(UUID.randomUUID());
-        message.setObject(command);
-
         verify(handler, times(0)).handle(command);
 
         jmsTemplate.convertAndSend("godfatherCommand", command);
-
         verify(handler, times(1)).handle(command);
     }
 

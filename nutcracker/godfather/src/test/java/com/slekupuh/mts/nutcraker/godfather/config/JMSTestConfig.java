@@ -42,14 +42,16 @@ public class JMSTestConfig {
 
     @Bean
     public ConnectionFactory connectionFactory() throws JMSException {
-        return new  SingleConnectionFactory(ActiveMQConnection.makeConnection());
+        ActiveMQConnection connection = ActiveMQConnection.makeConnection();
+        connection.setTrustAllPackages(true); // todo:warn
+        return new SingleConnectionFactory(connection);
     }
 
     @Bean
     public JmsListenerContainerFactory<?> jmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         // This provides all boot's default to this factory, including the message converter
-        //factory.setMessageConverter(messageConverter());
+        factory.setMessageConverter(messageConverter());
         factory.setConnectionFactory(connectionFactory);
 
         // You could still override some of Boot's default if necessary.
