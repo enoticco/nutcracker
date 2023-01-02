@@ -14,7 +14,9 @@
     <modules>
         <module>core-api</module>
         <module>godfather-api</module>
+        <module>mary-api</module>
         <module>godfather</module>
+
     </modules>
 
     <dependencyManagement>
@@ -29,6 +31,11 @@
             <dependency>
                 <groupId>com.slekupuh.mts.nutcraker.godfather</groupId>
                 <artifactId>godfather-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.slekupuh.mts.nutcraker.mary</groupId>
+                <artifactId>mary-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

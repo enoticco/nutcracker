@@ -18,7 +18,6 @@ import java.util.UUID;
 
 import static org.mockito.Mockito.*;
 
-//@RunWith(SpringRunner.class)
 @SpringBootTest(classes = {JMSTestConfig.class, StartPerformanceCommandHandlerTest.Config.class})
 public class StartPerformanceCommandHandlerTest {
 

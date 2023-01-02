@@ -19,6 +19,10 @@
 			<artifactId>godfather-api</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.slekupuh.mts.nutcraker.mary</groupId>
+			<artifactId>mary-api</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.slekupuh.mts.nutcraker.core</groupId>
 			<artifactId>core-api</artifactId>
 		</dependency>

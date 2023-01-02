@@ -1,3 +1,4 @@
 /Users/skurova/Documents/GDStorage/src/nutcracker/nutcracker/core-api/src/main/java/com/slekupuh/mts/nutcraker/core/command/Command.java
 /Users/skurova/Documents/GDStorage/src/nutcracker/nutcracker/core-api/src/main/java/com/slekupuh/mts/nutcraker/core/command/CommandHandler.java
+/Users/skurova/Documents/GDStorage/src/nutcracker/nutcracker/core-api/src/main/java/com/slekupuh/mts/nutcraker/core/command/CommandQueue.java
 /Users/skurova/Documents/GDStorage/src/nutcracker/nutcracker/core-api/src/main/java/com/slekupuh/mts/nutcraker/core/event/DomainEvent.java
