@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.slekupuh.mts.nutcraker.core</groupId>
-            <artifactId>core-api</artifactId>
+            <artifactId>core</artifactId>
         </dependency>
     </dependencies>
 

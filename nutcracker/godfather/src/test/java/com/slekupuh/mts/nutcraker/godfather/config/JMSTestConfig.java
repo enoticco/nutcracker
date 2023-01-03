@@ -1,6 +1,6 @@
 package com.slekupuh.mts.nutcraker.godfather.config;
 
-import com.slekupuh.mts.nutcraker.godfather.StartPerformanceCommandHandler;
+import com.slekupuh.mts.nutcraker.godfather.command.StartPerformanceCommandHandler;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.broker.BrokerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,24 +26,13 @@ import javax.jms.ObjectMessage;
 @TestConfiguration
 @EnableJms
 @TestPropertySource("classpath:application-test.yml")
-public class JMSTestConfig implements JmsListenerConfigurer {
-
-    @Autowired
-    private StartPerformanceCommandHandler handler;
-
-    @Override
-    public void configureJmsListeners(JmsListenerEndpointRegistrar registrar) {
-        SimpleJmsListenerEndpoint endpoint = new SimpleJmsListenerEndpoint();
-        endpoint.setId("jmsGodfatherCommand");
-        endpoint.setDestination("godfatherCommand");
-        endpoint.setMessageListener(command -> handler.handle((ObjectMessage) command));
-        registrar.registerEndpoint(endpoint);
-    }
+public class JMSTestConfig{
 
     @Bean
     public BrokerService broker() throws Exception {
         BrokerService broker = new BrokerService();
         broker.addConnector("tcp://localhost:61616");
+
         broker.setPersistent(false);
         return broker;
     }
@@ -51,6 +40,7 @@ public class JMSTestConfig implements JmsListenerConfigurer {
     @Bean
     public ConnectionFactory connectionFactory() throws JMSException {
         ActiveMQConnection connection = ActiveMQConnection.makeConnection();
+        connection.setTrustAllPackages(true); // todo:warn
         return new SingleConnectionFactory(connection);
     }
 

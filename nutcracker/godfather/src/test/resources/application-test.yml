@@ -6,8 +6,8 @@ spring:
     in-memory: true
     non-blocking-redelivery: true
     packages:
-      trust-all: false
-      trusted: com.slekupuh.mts.nutcraker.godfather.command
+      trust-all: true
+      trusted: com.slekupuh.mts.nutcraker.godfather.command com.slekupuh.mts.nutcraker.mary.command
 
 
 # Logging configuration print only messages for tutorial purposes
@@ -18,7 +18,3 @@ logging:
 #    - ".=info"
 #    - "com.memorynotfound=debug"
 #    - "org.springframework=info"
-
-transport:
-    command:
-      godfather:godfatherCommand
