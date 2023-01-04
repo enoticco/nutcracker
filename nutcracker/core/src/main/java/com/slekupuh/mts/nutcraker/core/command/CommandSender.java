@@ -11,6 +11,5 @@ import javax.jms.Session;
 
 
 public interface CommandSender {
-
     public void send(Command command, CommandQueue commandQueue);
 }
