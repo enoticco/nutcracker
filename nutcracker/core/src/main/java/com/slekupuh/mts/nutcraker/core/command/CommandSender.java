@@ -9,7 +9,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 
-
 public interface CommandSender {
     public void send(Command command, CommandQueue commandQueue);
 }

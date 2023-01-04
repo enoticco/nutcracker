@@ -7,6 +7,5 @@ import lombok.Getter;
 public interface CommandQueue {
 
     public String getQueueName();
-   // MARY("maryCommand"), GODFATHER("godfatherCommand");
-    //private String queue;
+   // MARY("maryCommand"), GODFATHER("godfatherCommand"); //todo:
 }
