@@ -11,7 +11,6 @@ import org.springframework.jms.connection.SingleConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.SimpleMessageConverter;
-import org.springframework.test.context.TestPropertySource;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
@@ -42,17 +41,19 @@ public class JMSTestConfig {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         factory.setMessageConverter(messageConverter());
         factory.setConnectionFactory(connectionFactory);
-
+        factory.setPubSubDomain(true);// topic
         return factory;
     }
 
     @Bean // Serialize message content to json using TextMessage
     public MessageConverter messageConverter() {
-
         return new SimpleMessageConverter();
     }
+
     @Bean
     public JmsTemplate jmsTemplate() throws JMSException {
-        return new JmsTemplate(connectionFactory());
+        JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());
+        jmsTemplate.setPubSubDomain(true);  // topic
+        return jmsTemplate;
     }
 }

@@ -27,7 +27,7 @@ public class StartPerformanceCommandHandler {
                 ChangeStateCommand maryCommand = new ChangeStateCommand(UUID.randomUUID(),
                         new State(State.Pose.SIT_DOWN,"On godfather lap"));
                 log.debug(" command {} processId {}", command, st.getProcessId());
-                commandSender.send(maryCommand, CommandQueue.MARY);
+                commandSender.send(maryCommand, CommandQueue.);
             }
             default ->  log.debug(" command {} processId {}", command, command.getProcessId());
         }
