@@ -7,14 +7,7 @@
         <artifactId>nutcracker</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.slekupuh.mts.nutcraker.core</groupId>
-    <artifactId>core</artifactId>
+    <groupId>com.slekupuh.mts.nutcraker.core.transport</groupId>
+    <artifactId>core-transport-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.slekupuh.mts.nutcraker.core.transport</groupId>
-            <artifactId>core-transport-api</artifactId>
-        </dependency>
-    </dependencies>
 </project>

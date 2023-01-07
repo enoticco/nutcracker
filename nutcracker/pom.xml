@@ -15,6 +15,8 @@
     </properties>
 
     <modules>
+        <module>core-transport-api</module>
+        <module>mary-api</module>
         <module>core</module>
     </modules>
 
@@ -22,8 +24,19 @@
         <dependencies>
             <!--module-->
             <dependency>
+                <groupId>com.slekupuh.mts.nutcraker.core.transport</groupId>
+                <artifactId>core-transport-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.slekupuh.mts.nutcraker.core</groupId>
                 <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.slekupuh.mts.nutcraker.mary</groupId>
+                <artifactId>mary-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -43,7 +56,6 @@
     <dependencies>
 
         <!--local-->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
