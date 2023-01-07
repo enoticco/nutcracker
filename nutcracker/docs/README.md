@@ -1,34 +1,43 @@
 # nutcracker
 
-TASK 
-
+- **TASK** 
+-
 - Read a piece of text for translation. You have to turn this part of the fairy tale "The Nutcracker and the Mouse King" into pure code 👇🏼
 - For clarify requirement use the МТС_гайд.pdf
-TEXT (EN)
-Meanwhile, the godfather, smiling affectionately, took Marie on his knees and said, stroking her head:
-
-"Don't listen to them, my little Marie!" God has given you more than all of us! You, like my Pirlipatchen in a fairy tale, were born a princess and know how to rule in a wonderful, beautiful kingdom, as for your Nutcracker, you will have to endure a lot of grief because of him: the mouse king pursues him everywhere; not me, but you alone can save him, be only persistent and devoted! 
-
-Neither Marie nor anyone present could guess what the godfather wanted to say with these words, and this speech seemed so strange to the medical adviser that he even felt the godfather's pulse and said:
-
-“Hey, dear friend, it looks like you have a rush of blood to your head, I’ll prescribe something for you.”
-
-Only the adviser shook her head in thought and said quietly:
-
-I think I can guess what he wants to say, but I just can't put it into words.
-TEXT(RU)
-
-Крестный между тем ласково улыбаясь, взял Мари на колени и сказал, гладя ее по головке:
-— Не слушай их, моя маленькая Мари! Тебе Бог дал больше, чем всем нам! Ты, как моя
-Пирлипатхен в сказке, родилась принцессой и умеешь править в чудесном, прекрасном королевстве, 
-что же касается твоего Щелкунчика, то тебе придется перенести из-за него немало горя: 
-мышиный король преследует его везде; не я, а ты одна можешь его спасти, будь только стойкой и преданной!
-
-Ни Мари, ни кто-либо из присутствующих не могли догадаться, что хотел крестный сказать этими словами, 
-а советнику медицины речь эта показалась до того странной, что он даже пощупал у крестного пульс и сказал:
-
-— Эге, любезный друг, да у вас, кажется, прилив крови к голове, я вам что-нибудь пропишу.
-
-Только советница в раздумьи покачала головой и тихо сказала:
-— Я, кажется, догадываюсь, что он хочет сказать, но только не могу этого выразить словами.
-
+-
+- 
+- **TEXT (EN)**
+- 
+- Meanwhile, the godfather, smiling affectionately, took Marie on his knees and said, stroking her head:
+- "Don't listen to them, my little Marie!" God has given you more than all of us! You, like my Pirlipatchen 
+- in a fairy tale, were born a princess and know how to rule in a wonderful, beautiful kingdom, as for your Nutcracker,
+- you will have to endure a lot of grief because of him: the mouse king pursues him everywhere; not me, but you alone
+- can save him, be only persistent and devoted! 
+- 
+- Neither Marie nor anyone present could guess what the godfather wanted to say with these words, and this speech
+- seemed so strange to the medical adviser that he even felt the godfather's pulse and said:
+- 
+- “Hey, dear friend, it looks like you have a rush of blood to your head, I’ll prescribe something for you.” 
+- 
+- Only the adviser shook her head in thought and said quietly:
+- 
+- I think I can guess what he wants to say, but I just can't put it into words. 
+- 
+- 
+- **TEXT(RU)**
+-
+- Крестный между тем ласково улыбаясь, взял Мари на колени и сказал, гладя ее по головке:
+- — Не слушай их, моя маленькая Мари! Тебе Бог дал больше, чем всем нам! Ты, как моя
+- Пирлипатхен в сказке, родилась принцессой и умеешь править в чудесном, прекрасном королевстве, 
+- что же касается твоего Щелкунчика, то тебе придется перенести из-за него немало горя: 
+- мышиный король преследует его везде; не я, а ты одна можешь его спасти, будь только стойкой и преданной!
+-
+- Ни Мари, ни кто-либо из присутствующих не могли догадаться, что хотел крестный сказать этими словами, 
+- а советнику медицины речь эта показалась до того странной, что он даже пощупал у крестного пульс и сказал:
+-
+- — Эге, любезный друг, да у вас, кажется, прилив крови к голове, я вам что-нибудь пропишу.
+-
+- Только советница в раздумьи покачала головой и тихо сказала:
+- — Я, кажется, догадываюсь, что он хочет сказать, но только не могу этого выразить словами.
+-
+-
